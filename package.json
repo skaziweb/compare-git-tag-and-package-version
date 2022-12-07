@@ -1,6 +1,6 @@
 {
   "name": "compare-git-tag-and-package-version",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package for compare latest Git Tag and version in package.json",
   "bin": {
     "compare-tags": "src/cli.js"
