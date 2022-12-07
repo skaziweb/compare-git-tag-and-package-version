@@ -1,6 +1,6 @@
 {
   "name": "compare-git-tag-and-package-version",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package for compare latest Git Tag and version in package.json",
   "bin": {
     "compare-tags": "src/cli.js"
@@ -12,6 +12,12 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "node src/index.js"
+    "test": "node src/index.js",
+    "bump": "npm version patch -m 'Novakid SignUp version updated to v%s'",
+    "bump:minor": "npm version minor -m 'Novakid SignUp version updated to v%s'",
+    "bump:major": "npm version major -m 'Novakid SignUp updated to v%s'"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2"
   }
 }
