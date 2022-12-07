@@ -1,0 +1,11 @@
+{
+  "name": "compare-git-tag-and-package-version",
+  "description": "Package for compare latest Git Tag and version in package.json",
+  "author": {
+    "name": "Aleksey Kuzmin",
+    "email": "skazi.web@yandex.ru"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
