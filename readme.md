@@ -1,6 +1,6 @@
 # Package to compare tags in package.json and in repository branch
 
-### The main reason for this package is do not forget add new tag after version update in package.josn
+### The main reason for creating this package is forgetting to add a new tag after updating the version in package.json
 
 ## Install package
 ```shell
