@@ -11,7 +11,7 @@ async function compare() {
     const { stdout: latest, stderr } = latestTag;
 
     log.info(`Application name: ${appName}`);
-    log.info(`Application version: ${appVersion}`);
+    log.info(`Application version: v${appVersion}`);
 
     if (stderr) {
         log.error(stderr)
@@ -24,7 +24,7 @@ async function compare() {
         log.error(message)
     }
 
-    const isVersionsEqual = `v${appVersion}` === latest;
+    const isVersionsEqual = `v${appVersion}`.trim() === latest.toString().trim();
 
     if (!isVersionsEqual) {
         message = `
