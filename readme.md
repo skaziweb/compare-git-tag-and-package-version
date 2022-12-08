@@ -28,7 +28,7 @@ module.exports = {
     "compare-tags": "compare-tags",
     "bump": "npm version patch -m 'AppName version updated to v%s'",
     "bump:minor": "npm version minor -m 'AppName version updated to v%s'",
-    "bump:major": "npm version major -m 'NAppName version updated to v%s'"
+    "bump:major": "npm version major -m 'AppName version updated to v%s'"
   }
 }
 ```
