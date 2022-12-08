@@ -1,6 +1,6 @@
 {
   "name": "compare-git-tag-and-package-version",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Package for compare latest Git Tag and version in package.json",
   "keywords": [
     "git tag",
