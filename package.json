@@ -20,12 +20,16 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "node src/index.js",
+    "compare-tags": "node src/index.js",
     "bump": "npm version patch -m 'Compare Tags version updated to v%s'",
     "bump:minor": "npm version minor -m 'Compare Tags version updated to v%s'",
-    "bump:major": "npm version major -m 'Compare Tags version updated to v%s'"
+    "bump:major": "npm version major -m 'Compare Tags version updated to v%s'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2"
   }
 }

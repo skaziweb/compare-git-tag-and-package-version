@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn compare-tags ||
+(
+    echo "❌❌ The version in the package.json doesn't match the latest tag! ❌❌";
+    echo "❌❌ Push command terminated! See the information above how to solve this problem! ❌❌";
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'

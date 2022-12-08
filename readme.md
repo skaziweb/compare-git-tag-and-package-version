@@ -54,3 +54,30 @@ ERROR:
     b) yarn bump:minor - to upgrade the minor version,
     c) yarn bump:major - to upgrade the major version        
 ```
+
+## How to use
+
+#### First of all install [husky package](https://www.npmjs.com/package/husky) and follow all setup instructions.
+
+#### [More information about husky setup](https://typicode.github.io/husky/#/)
+
+### Create 'pre-push' hook
+```shell
+npx husky add .husky/pre-push "compare-tags"
+```
+### In the next step, you can modify the hook for more information, as in the following example.
+
+```text
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn compare-tags ||
+(
+    echo "❌❌ The version in the package.json doesn't match the latest tag! ❌❌";
+    echo "❌❌ Push command terminated! See the information above how to solve this problem! ❌❌";
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
+```
