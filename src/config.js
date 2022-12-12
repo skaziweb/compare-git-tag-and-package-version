@@ -1,20 +1,22 @@
-let config = {}, appVersion, appName;
+let config = {};
 
 try {
     config = require(process.cwd()+"/tags-compare-config");
-    appVersion = config.appVersion;
-    appName = config.appName;
-} catch (e) {}
+} catch (e) {
+    console.log('Config file not found and skipped!')
+}
 
 if (!config.appName) {
     try {
-        config = require(process.cwd()+"package.json");
-        appVersion = config.version;
-        appName = config.name.replace(/(_|-)/gmi, ' ');
-    } catch (e) {}
+        config = require(process.cwd()+"/package.json");
+        config.appVersion = config.version;
+        config.appName = config.name.replace(/(_|-)/gmi, ' ');
+    } catch (e) {
+        console.log(e);
+        throw new Error('Something went wrong! See above!')
+    }
 }
 
 module.exports = {
-    appName,
-    appVersion
+   ...config
 }
