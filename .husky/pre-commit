@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '✅✅✅✅ You win this time... I am push this now. ✅✅✅✅'

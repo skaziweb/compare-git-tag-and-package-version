@@ -8,9 +8,13 @@ yarn add -D "compare-git-tag-and-package-version"
 npm i -D "compare-git-tag-and-package-version"
 ```
 
-## Create tags-compare-config.js in the project root directory
-
+## Create tags-compare-config.js in the project root directory.
 ```js
+/* 
+* Since version 1.0.8 this step can be skipped.
+* Default is to use package.json to get package name and version.
+* But if you want to beautify the output, you can create this configuration file.
+*/
 const appName = "AppName";
 const { version: appVersion } = require("./package.json");
 
@@ -78,6 +82,6 @@ yarn compare-tags ||
     false;
 )
 
-# If everything passes... Now we can commit
+# If everything passes... Now we can push
 echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
 ```

@@ -8,5 +8,5 @@ yarn compare-tags ||
     false;
 )
 
-# If everything passes... Now we can commit
-echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
+# If everything passes... Now we can push
+echo '✅✅✅✅ You win this time... I am push this now. ✅✅✅✅'
